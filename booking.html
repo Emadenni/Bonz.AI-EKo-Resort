@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Rooms</title>
+    <title>Booking</title>
   </head>
   <body>
     <div class="body__container--wrapper body__container--wrapper-rooms">
@@ -20,7 +20,7 @@
             <a href="./index.html">Home</a>
           </li>
           <li class="nav__list__item"><a href="./resort.html">Resort</a></li>
-          <li class="nav__list__item nav__list__item--compass">
+          <li class="nav__list__item">
             <a href="./rooms.html">Rooms</a>
           </li>
           <li class="nav__list__item">
@@ -38,63 +38,53 @@
             >Return home</a
           >
 
-          <a href="./booking.html" class="header__hero__button generic-button"
-            >Book Here!</a
+          <a href="./rooms.html" class="header__hero__button generic-button"
+            >Back to rooms</a
           >
         </div>
       </header>
 
       <section class="search-container">
-        <h2 class="search-container__title">Search rooms</h2>
+        <h2 class="search-container__title">Book here</h2>
 
-        <form action="#" class="search-container__form">
+        <form action="#" class="search-container__form book__container">
           <div class="search-container__form-flex">
-            <label for="room-type">Room type</label>
-            <select name="room-type" id="room-type">
-              <option value="all">All</option>
-              <option value="single">Single Room</option>
-              <option value="double">Double Room</option>
-              <option value="suit">Suite</option>
+            <label for="booking-room-type">Room type</label>
+            <select name="room-type" id="booking-room-type">
+              <option value="Presidential Room">Presidential Room</option>
+              <option value="Family Deluxe">Family Deluxe</option>
+              <option value="Double Deluxe">Double Deluxe</option>
+              <option value="Family Standard">Family Standard</option>
+              <option value="Family Basic">Family Basic</option>
+              <option value="Double Standard">Double Standard</option>
+              <option value="Single Deluxe">Single Deluxe</option>
+              <option value="Double Basic">Double Basicy</option>
+              <option value="Family Economy">Family Economy</option>
+              <option value="Single Standard">Single Standard</option>
+              <option value="Double Economy">Double Economy</option>
+              <option value="Single Basic">Single Basic</option>
             </select>
           </div>
 
-          <div class="search-container__form-flex">
-            <label for="guests">Guests</label>
-            <select name="guests" id="guests">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="3+">3+</option>
-            </select>
+          <div class="search-container__form-flex book__container">
+            <label for="check-in">Check-in:</label>
+            <input type="date" id="check-in" name="check-in" />
+
+            <label for="check-out">Check-out:</label>
+            <input type="date" id="check-out" name="check-out" />
           </div>
 
-          <div class="search-container__form-flex">
-            <label for="room-price">Room price:</label>
-            <input
-              type="range"
-              id="room-price"
-              name="room-price"
-              min="0"
-              max="1000"
-            />
-          </div>
+          <div class="search-container__form-flex book__container">
+            <label for="adults">Adults</label>
+            <input type="number" id="adults" name="adults" min="1" max="10" />
 
-          <div class="search-container__form-flex">
-            <label for="room-size">Room size</label>
+            <label for="children">Children</label>
             <input
               type="number"
-              id="room-size"
-              name="room-size"
+              id="children"
+              name="children"
               min="0"
-              placeholder="Min"
-            />
-
-            <input
-              type="number"
-              id="room-max-size"
-              name="room-max-size"
-              min="0"
-              placeholder="Max"
+              max="5"
             />
           </div>
 
@@ -109,7 +99,9 @@
             </div>
           </div>
         </form>
-        <button class="generic-button search-container__btn">Search</button>
+        <button type="submit" class="generic-button book-container__btn">
+          Complete Booking
+        </button>
       </section>
 
       <div class="gallery-container">
