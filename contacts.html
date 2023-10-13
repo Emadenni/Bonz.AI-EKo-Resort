@@ -21,28 +21,36 @@
           </li>
           <li class="nav__list__item"><a href="./resort.html">Resort</a></li>
           <li class="nav__list__item"><a href="./rooms.html">Rooms</a></li>
-          <li class="nav__list__item nav__list__item--compass"><a href="./contacts.html">Contacts</a>
+          <li class="nav__list__item nav__list__item--compass">
+            <a href="./contacts.html">Contacts</a>
           </li>
           <li class="nav__list__item"><a href="./aboutUs.html">About Us</a></li>
         </ul>
+
+        <div class="hamburger-icon">☰</div>
+        <ul class="hamburger-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./resort.html">Resort</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+          <li><a href="./aboutUs.html">About Us</a></li>
+        </ul>
       </nav>
 
-     <div class="contacts__form--wrapper">
+      <div class="contacts__form--wrapper">
+        <form action="process.php" method="post" class="contacts__form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-      <form action="process.php" method="post" class="contacts__form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      
-        <input type="submit" value="Submit" class="contacts__form-submit" >
-      </form>
-    </div>
-    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <input type="submit" value="Submit" class="contacts__form-submit" />
+        </form>
+      </div>
 
       <footer class="footer__rooms">
         <section class="footer__rooms__explorer">
@@ -71,27 +79,42 @@
               class="footer__rooms__explorer__img"
             />
           </div>
-        
-        </section>
-        
-        
-
-          <section class="footer__rooms__contacts" >
-            <h3 class="footer__rooms__contacts__title" >Contacts</h3>
-            <ul class="footer__rooms__contacts__list">
-                <li class="footer__rooms__contacts__list__item"><strong>address:</strong>
-                     Narnja street, 22 - Hogworts (JM) </li>
-                <li class="footer__rooms__contacts__list__item"><strong>tel:</strong>
-                    072 32 32 65 </li>
-                    <li class="footer__rooms__contacts__list__item"><strong>mail:</strong>
-                    bonzAI@resort.com
-                </li>
-            </ul>
-
         </section>
 
-
+        <section class="footer__rooms__contacts">
+          <h3 class="footer__rooms__contacts__title">Contacts</h3>
+          <ul class="footer__rooms__contacts__list">
+            <li class="footer__rooms__contacts__list__item">
+              <strong>address:</strong> Narnja street, 22 - Hogworts (JM)
+            </li>
+            <li class="footer__rooms__contacts__list__item">
+              <strong>tel:</strong> 072 32 32 65
+            </li>
+            <li class="footer__rooms__contacts__list__item">
+              <strong>mail:</strong>
+              bonzAI@resort.com
+            </li>
+          </ul>
+        </section>
       </footer>
     </div>
+    <script>
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".hamburger-menu").classList.toggle("active");
+          document.querySelector(".nav").classList.toggle("active");
+        });
+
+      var select = document.querySelector(".hamburger-menu");
+
+      select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
+    </script>
   </body>
 </html>

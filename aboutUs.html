@@ -30,6 +30,15 @@
             <a href="./aboutUs.html">About Us</a>
           </li>
         </ul>
+
+        <div class="hamburger-icon">☰</div>
+        <ul class="hamburger-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./resort.html">Resort</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+          <li><a href="./aboutUs.html">About Us</a></li>
+        </ul>
       </nav>
 
       <main class="aboutUs__main-container">
@@ -37,14 +46,13 @@
           <h1 class="main-container__section__title">Our proposal</h1>
 
           <p class="main-container__section__par">
-
             <span class="section__par__span">
-            Relax in our state-of-the-art rooms, dine in our sustainable
-            restaurant, and explore the breathtaking landscapes that surround
-            us. At Bonz-AI Eko Resort, we redefine what it means to vacation in
-            style while taking care of our planet. Book your stay today and be
-            part of a brighter, greener tomorrow.
-          </span>
+              Relax in our state-of-the-art rooms, dine in our sustainable
+              restaurant, and explore the breathtaking landscapes that surround
+              us. At Bonz-AI Eko Resort, we redefine what it means to vacation
+              in style while taking care of our planet. Book your stay today and
+              be part of a brighter, greener tomorrow.
+            </span>
             <br /><br />
 
             At Bonz-AI Eko Resort, our journey began with a simple yet powerful
@@ -132,5 +140,23 @@
         </section>
       </footer>
     </div>
+    <script>
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".hamburger-menu").classList.toggle("active");
+          document.querySelector(".nav").classList.toggle("active");
+        });
+
+      var select = document.querySelector(".hamburger-menu");
+
+      select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
+    </script>
   </body>
 </html>

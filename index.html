@@ -7,7 +7,7 @@
     <title>Home | BonzAI resort</title>
   </head>
   <body>
-    <div class="body__container--wrapper body__container--wrapper-index ">
+    <div class="body__container--wrapper body__container--wrapper-index">
       <nav class="nav--index">
         <img
           src="./bonzai-assets/LogoBonzAiEkoResort.png"
@@ -26,20 +26,30 @@
           </li>
           <li class="nav__list__item"><a href="./aboutUs.html">About Us</a></li>
         </ul>
+        <div class="hamburger-icon">☰</div>
+        <ul class="hamburger-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./resort.html">Resort</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+          <li><a href="./aboutUs.html">About Us</a></li>
+        </ul>
+
+      
       </nav>
 
       <header class="header__hero header__hero-index">
-        <div class="header__hero--wrapper">
+        <div class="header__hero--wrapper-index header__hero--wrapper">
           <h2 class="header__hero__title">Discover us here</h2>
-          
-            <a href="./rooms.html" class=" generic-button header__hero__button">Our rooms</a>
-         
+
+          <a href="./rooms.html" class="generic-button header__hero__button"
+            >Our rooms</a
+          >
         </div>
       </header>
 
       <main class="main__content">
         <div class="main__article--wrapper">
-            
           <article class="main__article main__article__evening">
             <h2>Evenings</h2>
             <img
@@ -47,7 +57,7 @@
               alt="evening"
               class="main__article--evening_img main_article_img"
             />
-            <p class="main_article_par">
+            <p class="main__article__par">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
               odio id repellendus minus repudiandae doloremque vero voluptatum
               exercitationem ut beatae perferendis consectetur similique, eaque,
@@ -59,9 +69,9 @@
             <img
               src="./bonzai-assets/adventure.png"
               alt="rafting"
-              class="main__article--adventure_img main_article__img"
+              class="main__article--adventure_img main__article__img"
             />
-            <p class="main_article_par">
+            <p class="main__article__par">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
               odio id repellendus minus repudiandae doloremque vero voluptatum
               exercitationem ut beatae perferendis consectetur similique, eaque,
@@ -73,9 +83,9 @@
             <img
               src="./bonzai-assets/travel.png"
               alt=""
-              class="main__article--travel_img main_article_img"
+              class="main__article--travel_img main__article__img"
             />
-            <p class="main_article_par">
+            <p class="main__article__par">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
               odio id repellendus minus repudiandae doloremque vero voluptatum
               exercitationem ut beatae perferendis consectetur similique, eaque,
@@ -87,9 +97,9 @@
             <img
               src="./bonzai-assets/party.png"
               alt=""
-              class="main__article--party_img main_article_img"
+              class="main__article--party_img main__article__img"
             />
-            <p class="main_article_par">
+            <p class="main__article__par">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
               odio id repellendus minus repudiandae doloremque vero voluptatum
               exercitationem ut beatae perferendis consectetur similique, eaque,
@@ -118,38 +128,75 @@
             stay that blends luxury and environmental responsibility.
           </p>
 
-          
-            <a href="./aboutUs.html" class="main__aside__btn generic-button">read more here</a>
-        
+          <a href="./aboutUs.html" class="main__aside__btn generic-button"
+            >read more here</a
+          >
         </aside>
       </main>
 
       <footer class="footer__rooms">
         <section class="footer__rooms__explorer">
-          <h3 class="footer__rooms__explorer__title">Explore our <a href="./rooms.html" class="footer__rooms__explorer__title--special">rooms</a> </h3>
+          <h3 class="footer__rooms__explorer__title">
+            Explore our
+            <a
+              href="./rooms.html"
+              class="footer__rooms__explorer__title--special"
+              >rooms</a
+            >
+          </h3>
           <div class="footer__rooms__explorer__img-wrapper">
-            <img src="./bonzai-assets/assets/photos/04-day.jpg" alt="rooms" class="footer__rooms__explorer__img">
-            <img src="./bonzai-assets/assets/photos/01-night.jpg" alt="rooms" class="footer__rooms__explorer__img">
-            <img src="./bonzai-assets/assets/photos/02-day.jpg" alt="rooms" class="footer__rooms__explorer__img">
+            <img
+              src="./bonzai-assets/assets/photos/04-day.jpg"
+              alt="rooms"
+              class="footer__rooms__explorer__img"
+            />
+            <img
+              src="./bonzai-assets/assets/photos/01-night.jpg"
+              alt="rooms"
+              class="footer__rooms__explorer__img"
+            />
+            <img
+              src="./bonzai-assets/assets/photos/02-day.jpg"
+              alt="rooms"
+              class="footer__rooms__explorer__img"
+            />
           </div>
         </section>
 
-        <section class="footer__rooms__contacts" >
-            <h3 class="footer__rooms__contacts__title" >Contacts</h3>
-            <ul class="footer__rooms__contacts__list">
-                <li class="footer__rooms__contacts__list__item"><strong>address:</strong>
-                     Narnja street, 22 - Hogworts (JM) </li>
-                <li class="footer__rooms__contacts__list__item"><strong>tel:</strong>
-                    072 32 32 65 </li>
-                    <li class="footer__rooms__contacts__list__item"><strong>mail:</strong>
-                    bonzAI@resort.com
-                </li>
-            </ul>
-
+        <section class="footer__rooms__contacts">
+          <h3 class="footer__rooms__contacts__title">Contacts</h3>
+          <ul class="footer__rooms__contacts__list">
+            <li class="footer__rooms__contacts__list__item">
+              <strong>address:</strong> Narnja street, 22 - Hogworts (JM)
+            </li>
+            <li class="footer__rooms__contacts__list__item">
+              <strong>tel:</strong> 072 32 32 65
+            </li>
+            <li class="footer__rooms__contacts__list__item">
+              <strong>mail:</strong>
+              bonzAI@resort.com
+            </li>
+          </ul>
         </section>
-
-
       </footer>
     </div>
+    <script>
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".hamburger-menu").classList.toggle("active");
+          document.querySelector(".nav").classList.toggle("active");
+        });
+
+      var select = document.querySelector(".hamburger-menu");
+
+      select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
+    </script>
   </body>
 </html>

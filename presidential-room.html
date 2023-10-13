@@ -7,7 +7,7 @@
     <title>Presidential room</title>
   </head>
   <body>
-    <div class="body__container--wrapper body__container--wrapper-contacts">
+    <div class="body__container--wrapper body__container--wrapper-pr-room">
       <nav class="nav--index">
         <img
           src="./bonzai-assets/LogoBonzAiEkoResort.png"
@@ -26,10 +26,18 @@
           </li>
           <li class="nav__list__item"><a href="./aboutUs.html">About Us</a></li>
         </ul>
+        <div class="hamburger-icon">☰</div>
+        <ul class="hamburger-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./resort.html">Resort</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+          <li><a href="./aboutUs.html">About Us</a></li>
+        </ul>
       </nav>
 
       <header class="header__hero-presidential">
-        <div class="header__hero--wrapper">
+        <div class="header__hero--wrapper header__hero--wrapper-pr-room">
           <h2 class="header__hero__title">Presidential room</h2>
 
           <a href="./rooms.html" class="header__hero__button generic-button"
@@ -137,5 +145,23 @@
         </section>
       </footer>
     </div>
+    <script>
+      document
+        .querySelector(".hamburger-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".hamburger-menu").classList.toggle("active");
+          document.querySelector(".nav").classList.toggle("active");
+        });
+
+      var select = document.querySelector(".hamburger-menu");
+
+      select.addEventListener("change", function () {
+        var selectedValue = select.value;
+
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
+    </script>
   </body>
 </html>
