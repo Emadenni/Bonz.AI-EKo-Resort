@@ -114,7 +114,7 @@ a {
 /* header */ /* header */ /* header */ /* header */ /* header */ /* header */ /* header */ /* header */ /* header */ /* header */
 
 .header__hero {
-  background-image:bonzai-assets/assets/photos/09-day.jpg;
+  background-image:url(bonzai-assets/assets/photos/09-day.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
